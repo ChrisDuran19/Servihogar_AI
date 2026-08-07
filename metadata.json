@@ -1,0 +1,6 @@
+{
+  "name": "ServiHogar AI",
+  "description": "Plataforma inteligente de servicios para el hogar impulsada por IA, geolocalización en tiempo real, pagos en custodia (escrow) y gestión integral.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
