@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="ServiHogar AI" width="100%"/>
 
 <br/>
 
