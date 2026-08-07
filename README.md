@@ -1,63 +1,151 @@
-🏠 ServiHogar AI
+<div align="center">
 
-Plataforma inteligente de servicios para el hogar impulsada por Inteligencia Artificial.
+<img src="./assets/banner.svg" alt="ServiHogar AI" width="100%"/>
 
-Descripción
+<br/>
 
-ServiHogar AI es una aplicación móvil en desarrollo cuyo objetivo es transformar la contratación de servicios para el hogar mediante Inteligencia Artificial, geolocalización, programación de servicios y una experiencia segura para clientes y profesionales.
+[![Kotlin](https://img.shields.io/badge/Kotlin-100%25-7F52FF?style=flat-square&logo=kotlin&logoColor=white)](https://kotlinlang.org)
+[![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-UI-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
+[![Firebase](https://img.shields.io/badge/Firebase-AI-FFCA28?style=flat-square&logo=firebase&logoColor=black)](https://firebase.google.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2DD4BF.svg?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/Estado-En%20Desarrollo-E8A33D?style=flat-square)](#-estado-del-proyecto)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-9C7BFF?style=flat-square)](#-contribuir)
 
-Actualmente el proyecto se encuentra en la fase inicial (MVP), enfocada en construir una base sólida y escalable para Android utilizando Kotlin y Jetpack Compose.
+**Una plataforma que diagnostica el problema, encuentra al profesional correcto y da seguimiento al servicio — de principio a fin.**
 
-Estado del proyecto
+[Características](#-características) ·
+[Arquitectura](#%EF%B8%8F-arquitectura) ·
+[Instalación](#-instalación) ·
+[Estructura](#-estructura-del-proyecto) ·
+[Roadmap](#-roadmap)
 
-🚧 En desarrollo
+</div>
 
-Arquitectura base configurada
+<br/>
 
-Proyecto Android inicial creado
+## 📖 Sobre el proyecto
 
-Integración inicial con Firebase AI
+Contratar a alguien de confianza para un problema del hogar suele significar preguntar en grupos de WhatsApp, comparar precios a ciegas y esperar que la persona llegue. **ServiHogar AI** busca resolver eso con una experiencia de un solo flujo:
 
-Objetivos
+1. El usuario **describe el problema** con sus propias palabras.
+2. La IA lo **diagnostica** y estima el tipo de servicio y su urgencia.
+3. La app **conecta** al usuario con profesionales verificados cerca de su ubicación.
+4. El servicio se **agenda, rastrea y paga** dentro de la misma app.
 
-Construir una plataforma moderna para servicios del hogar.
+El proyecto está en **fase MVP**, construyendo primero una base Android sólida (Kotlin + Jetpack Compose) sobre la que se irán habilitando el resto de los módulos.
 
-Implementar una arquitectura escalable basada en Clean Architecture y MVVM.
+<br/>
 
-Integrar IA para diagnóstico y estimación de servicios.
+## ✨ Características
 
-Preparar el proyecto para futuras integraciones con mapas, pagos y notificaciones.
+<table>
+<tr>
+<td width="33%" valign="top">
 
-Tecnologías
+### 🤖 Diagnóstico con IA
+El usuario describe el problema en lenguaje natural. Firebase AI clasifica el tipo de servicio, estima la urgencia y sugiere una categoría de profesional.
 
-Kotlin
+</td>
+<td width="33%" valign="top">
 
-Jetpack Compose
+### 📍 Geolocalización
+Encuentra profesionales verificados cerca de tu ubicación, con distancia estimada y disponibilidad en tiempo real.
 
-Material 3
+</td>
+<td width="33%" valign="top">
 
-Room
+### 📅 Agenda integrada
+Programa el servicio en el horario que te convenga y recibe confirmación y recordatorios automáticos.
 
-Retrofit
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
 
-OkHttp
+### 🧾 Órdenes de servicio
+Cada solicitud genera una orden con estado, técnico asignado y costo estimado — trazabilidad total del servicio.
 
-Moshi
+</td>
+<td width="33%" valign="top">
 
-Firebase
+### 🔒 Perfiles verificados
+Clientes y profesionales operan bajo perfiles verificados, pensados para generar confianza en ambos sentidos.
 
-Firebase AI
+</td>
+<td width="33%" valign="top">
 
-Coroutines
+### 💳 Pagos seguros *(planeado)*
+Pago dentro de la app una vez confirmado el servicio, sin manejar efectivo ni datos sensibles fuera de la plataforma.
 
-Gradle Kotlin DSL
+</td>
+</tr>
+</table>
 
-Git / GitHub
+<br/>
 
-Estructura del proyecto
+<div align="center">
+<img src="./assets/preview.svg" alt="Vista previa conceptual de ServiHogar AI" width="100%"/>
+<sub>Mockups de diseño que ilustran el flujo objetivo del producto. La app está en fase MVP; estas pantallas aún no están implementadas.</sub>
+</div>
 
-ServiHogar_AI
-│
+<br/>
+
+## 🚧 Estado del proyecto
+
+| Módulo | Estado |
+|---|:---:|
+| Arquitectura base (Clean Architecture + MVVM) | ✅ Completado |
+| Proyecto Android inicial (Kotlin + Compose) | ✅ Completado |
+| Integración inicial con Firebase AI | ✅ Completado |
+| Autenticación de usuarios | 🔜 Planificado |
+| Perfiles de cliente / profesional | 🔜 Planificado |
+| Publicación y gestión de servicios | 🔜 Planificado |
+| Geolocalización en tiempo real | 🔜 Planificado |
+| Chat cliente–profesional | 🔜 Planificado |
+| Pagos seguros | 🔜 Planificado |
+| Panel administrativo | 🔜 Planificado |
+
+<br/>
+
+## 🛠 Tecnologías
+
+<div align="center">
+
+| Categoría | Stack |
+|---|---|
+| **Lenguaje** | Kotlin |
+| **UI** | Jetpack Compose · Material 3 |
+| **Persistencia local** | Room |
+| **Red** | Retrofit · OkHttp · Moshi |
+| **Backend / Cloud** | Firebase · Firebase AI |
+| **Concurrencia** | Kotlin Coroutines |
+| **Build** | Gradle Kotlin DSL |
+| **Control de versiones** | Git / GitHub |
+
+</div>
+
+<br/>
+
+## 🏗️ Arquitectura
+
+El proyecto sigue **Clean Architecture** combinada con **MVVM**: la UI nunca habla directamente con la red o la base de datos, todo pasa por el `Repository`, que es la única capa con acceso a servicios externos.
+
+<div align="center">
+<img src="./assets/architecture.svg" alt="Arquitectura de ServiHogar AI" width="100%"/>
+</div>
+
+- **Presentación** — `Screens` (Compose), `ViewModel`, `Navigation`. Sólo conoce estado de UI, nunca detalles de red o base de datos.
+- **Dominio** — `Model` y casos de uso. Reglas de negocio puras, sin dependencias de Android.
+- **Datos** — `Repository`, `Room` (local) y `Retrofit` (remoto). Decide si una petición se resuelve en caché o en red, y es el único punto de contacto con Firebase AI, APIs REST y, más adelante, mapas y pagos.
+
+Esta separación permite testear la lógica de negocio de forma aislada y sostener el crecimiento del proyecto sin acoplar la UI a implementaciones concretas.
+
+<br/>
+
+## 📁 Estructura del proyecto
+
+```
+ServiHogar_AI/
 ├── .github/
 ├── app/
 │   ├── src/
@@ -99,93 +187,140 @@ ServiHogar_AI
 ├── gradlew.bat
 ├── README.md
 └── LICENSE
+```
 
-Requisitos
+<br/>
 
-Android Studio (Narwhal o superior)
+## ✅ Requisitos previos
 
-JDK 21
+- **Android Studio** (Narwhal o superior)
+- **JDK 21**
+- **Android SDK 36**
+- **Git**
 
-Android SDK 36
+<br/>
 
-Git
+## 🚀 Instalación
 
-Clonar
+**1. Clonar el repositorio**
 
+```bash
 git clone https://github.com/ChrisDuran19/Servihogar_AI.git
 cd Servihogar_AI
+```
 
-Ejecutar
+**2. Sincronizar y compilar**
 
-Sincronizar:
-
+```bash
+# Linux / macOS
 ./gradlew build
 
-Windows:
-
+# Windows
 gradlew.bat build
+```
 
-Instalar en modo Debug:
+**3. Instalar en modo Debug**
 
+```bash
 ./gradlew installDebug
+```
 
-APK Debug:
+<br/>
 
-./gradlew assembleDebug
+## ⚙️ Comandos de Gradle
 
-APK Release:
+| Comando | Descripción |
+|---|---|
+| `./gradlew build` | Sincroniza y compila el proyecto |
+| `./gradlew installDebug` | Instala la app en modo Debug |
+| `./gradlew assembleDebug` | Genera el APK de Debug |
+| `./gradlew assembleRelease` | Genera el APK de Release |
+| `./gradlew bundleRelease` | Genera el Bundle de Release |
+| `./gradlew clean` | Limpia el proyecto |
+| `./gradlew clean build` | Limpia y reconstruye el proyecto |
 
-./gradlew assembleRelease
+<br/>
 
-Bundle:
-
-./gradlew bundleRelease
-
-Limpiar:
-
-./gradlew clean
-
-Reconstruir:
-
-./gradlew clean build
-
-Depuración
+## 🐞 Depuración
 
 Desde Android Studio:
 
-Abrir el proyecto.
+1. Abre el proyecto.
+2. Espera a que finalice la sincronización de Gradle.
+3. Selecciona la configuración `app`.
+4. Inicia un emulador o conecta un dispositivo físico.
+5. Ejecuta con **Run ▶️** o **Debug 🐛**.
 
-Esperar sincronización de Gradle.
+Herramientas recomendadas: **Breakpoints**, **Logcat**, **Layout Inspector**, **Database Inspector** y **Profiler**.
 
-Seleccionar la configuración app.
+<br/>
 
-Iniciar un emulador o conectar un dispositivo.
+## 🔀 Flujo de trabajo con Git
 
-Ejecutar con Run o Debug.
-
-Utilizar Breakpoints, Logcat, Layout Inspector, Database Inspector y Profiler para analizar la aplicación.
-
-Flujo Git
-
+```bash
 git checkout -b feature/nueva-funcionalidad
 git add .
 git commit -m "feat: descripción"
 git push origin feature/nueva-funcionalidad
+```
 
-Convenciones:
+**Convenciones de commits:**
 
-feat
+| Prefijo | Uso |
+|---|---|
+| `feat` | Nueva funcionalidad |
+| `fix` | Corrección de errores |
+| `docs` | Cambios en documentación |
+| `refactor` | Refactorización de código |
+| `test` | Añadir o modificar pruebas |
+| `chore` | Tareas de mantenimiento |
 
-fix
+<br/>
 
-docs
+## 🗺 Roadmap
 
-refactor
+- [x] Arquitectura base + integración inicial con Firebase AI
+- [ ] Autenticación de usuarios
+- [ ] Perfiles de cliente y profesional
+- [ ] Publicación y gestión de servicios
+- [ ] Agenda de servicios
+- [ ] Geolocalización en tiempo real
+- [ ] Integración con mapas
+- [ ] Chat entre cliente y profesional
+- [ ] Diagnóstico mediante IA (extendido)
+- [ ] Seguimiento del técnico en vivo
+- [ ] Pagos seguros
+- [ ] Panel administrativo
 
-test
+> El objetivo del MVP es validar el flujo diagnóstico → match → agenda → seguimiento con una arquitectura ya preparada para escalar.
 
-chore
+<br/>
 
-Próximos pasos
+## 🤝 Contribuir
 
-Las siguientes fases incorporarán autenticación, perfiles de usuario, publicación y gestión de servicios, agenda, geolocalización en tiempo real, integración con mapas, chat, diagnóstico mediante IA, seguimiento del técnico, pagos seguros, panel administrativo y las funcionalidades necesarias para completar el MVP de ServiHogar AI con una arquitectura preparada para crecer.
+El proyecto está en desarrollo activo.
+
+1. Haz un fork del repositorio.
+2. Crea tu rama: `git checkout -b feature/nueva-funcionalidad`.
+3. Sigue las [convenciones de commits](#-flujo-de-trabajo-con-git).
+4. Haz push a tu rama y abre un Pull Request.
+
+<br/>
+
+## 📄 Licencia
+
+Distribuido bajo licencia **MIT**. Consulta [LICENSE](LICENSE) para más detalles.
+
+<br/>
+
+## 👤 Autor
+
+**Chris Duran**
+
+[![GitHub](https://img.shields.io/badge/GitHub-ChrisDuran19-181717?style=flat-square&logo=github)](https://github.com/ChrisDuran19)
+
+<br/>
+
+<div align="center">
+<sub>⭐️ Si este proyecto te parece interesante, considera darle una estrella en GitHub.</sub>
+</div>
